@@ -1,0 +1,24 @@
+[project]
+name = "seedling-counter"
+version = "0.1.0"
+description = "Sistema de conteo de plantines con YOLO26"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "ultralytics>=8.4.6",
+    "opencv-python",
+    "torch",
+    "torchvision",
+    "torchaudio",
+]
+
+# --- ESTO ACTIVA LA GPU ---
+[[tool.uv.index]]
+name = "pytorch-cuda"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cuda" }
+torchvision = { index = "pytorch-cuda" }
+torchaudio = { index = "pytorch-cuda" }
