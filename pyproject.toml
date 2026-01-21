@@ -5,6 +5,7 @@ description = "Sistema de conteo de plantines con YOLO26"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
+    "flet[all]>=0.25.0",
     "ultralytics>=8.4.6",
     "opencv-python",
     "torch",
